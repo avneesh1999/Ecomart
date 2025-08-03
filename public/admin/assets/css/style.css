@@ -4536,10 +4536,18 @@ span.select2-container.select2-container--default.select2-container--open {
     width: 18px
 }
 
-.sidebar .sidebar-menu>ul>li>a:hover {
+.sidebar .sidebar-menu>ul>li>a:hover, .sidebar .sidebar-menu>ul>li.show>a {
     background: #1b2850;
     color: #fff;
     border-radius: 5px
+}
+
+.sidebar .sidebar-menu>ul>li.show>a span{
+    color: inherit;
+}
+
+.sidebar .sidebar-menu>ul>li.show>a img{
+    filter: brightness(0) invert(1);
 }
 
 .sidebar .sidebar-menu>ul>li>a:hover img {
@@ -4595,11 +4603,14 @@ span.select2-container.select2-container--default.select2-container--open {
     font-family: "font awesome 5 free"
 }
 
-.sidebar .sidebar-menu>ul>li>a.subdrop .menu-arrow {
+.sidebar .sidebar-menu>ul>li>a.subdrop .menu-arrow, .sidebar .sidebar-menu>ul>li.show>a .menu-arrow  {
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg)
 }
+
+
+
 
 .sidebar .sidebar-menu>ul>li.active a {
     background: #1b2850;
@@ -4650,11 +4661,13 @@ span.select2-container.select2-container--default.select2-container--open {
     left: 16px
 }
 
-.sidebar .sidebar-menu>ul>li.submenu ul li a:hover {
+.sidebar .sidebar-menu>ul>li.submenu ul li a:hover, .sidebar .sidebar-menu>ul>li.submenu ul li.active a {
     color: #ff9f43
 }
 
-.sidebar .sidebar-menu>ul>li.submenu ul li a:hover:after {
+
+
+.sidebar .sidebar-menu>ul>li.submenu ul li a:hover:after, .sidebar .sidebar-menu>ul>li.submenu ul li.active a:after {
     background: #ff9f43;
     border: 1px solid #ff9f43
 }

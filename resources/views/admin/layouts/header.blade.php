@@ -259,14 +259,14 @@
                               </li>
                            </ul>
                      </li>
-                     <li class="submenu {{ Request::is('brands*') ? 'show' : '' }}">
+                     <li class="submenu {{ Request::is(patterns: 'categories*') ? 'show' : '' }}">
                            <a href="javascript:void(0);">
                               <img src="{{ asset('admin/assets/img/icons/brand-icon.svg') }}" alt="img">
                               <span>Category</span>
                               <span class="menu-arrow"></span>
                            </a>
                            <ul style="{{ Request::is('categories*') ? 'display: block;' : '' }}">
-                              <li class="{{ Request::is('category') ? 'active' : '' }}">
+                              <li class="{{ Request::is('categories') ? 'active' : '' }}">
                                  <a href="{{ route('categories.index') }}">Category List</a>
                               </li>
                               <li class="{{ Request::is('category/create') ? 'active' : '' }}">
